@@ -1,0 +1,92 @@
+body {
+    font-family: "Arial", "Sans-Serif";
+    background-image: url("http://cs-server.usc.edu:33262/www/images/rain.jpg");
+    margin-left:100px;
+}
+
+.big-font-size {
+    font-size:30px;
+}
+
+input[type="text"] {
+    height:30px;
+    width:600px;
+    font-size:30px;
+}
+
+input[type="button"] {
+    height:38px;
+    width:100px;
+    font-size:30px;
+}
+
+input[type="submit"] {
+    height:38px;
+    width:100px;
+    font-size:30px;
+}
+
+.error {
+    color: white;
+    text-align: center;
+}
+
+.city{
+    color: white;
+    font-size: 50px;
+    margin-bottom: -20px;
+}
+
+.region{
+    color: white;
+    font-size: 25px;
+    margin-bottom:60px;
+}
+
+.yui3-g-r {
+    letter-spacing: -0.31em;
+    *letter-spacing: normal;
+    *word-spacing: -0.43em;
+}
+
+.yui3-u-1-4{
+    display: inline-block;
+    zoom: 1; *display: inline; /* IE < 8: fake inline-block */
+    letter-spacing: normal;
+    word-spacing: normal;
+    vertical-align: top;
+    text-rendering: auto;
+    width: 33.33333%;
+}
+
+.cell{
+    vertical-align: top;
+}
+
+.white-word {
+    color: white;
+}
+
+big{
+    font-size: 100px;
+}
+
+
+.yahoo{
+    position: absolute;
+    color: white;
+    bottom: 20px;
+    right: 20px;
+}
+
+.lucid {
+    visibility:hidden;
+}
+
+.high{
+    color:orange;
+}
+
+.low{
+    color:#00BFFF;
+}

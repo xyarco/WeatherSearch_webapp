@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/1999/xhtml">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+    <title>Weather Search - USC</title>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+    <script type="text/javascript" src="js/callservlet.js"></script>
+    <script type="text/javascript" src="js/generateerror.js"></script>
+    <script type="text/javascript" src="js/generatehead.js"></script>
+    <script type="text/javascript" src="js/generatetoday.js"></script>
+    <script type="text/javascript" src="js/generateforecast.js"></script>
+    <script type="text/javascript" src="js/generatepost.js"></script>
+    <script type="text/javascript" src="js/generatenews.js"></script>
+    <script type="text/javascript" src="js/generatefeed.js"></script>
+    <script type="text/javascript" src="js/facebookpost.js"></script>
+    <script type="text/javascript" src="js/createcookie.js"></script>
+    <script type="text/javascript" src="js/erasecookie.js"></script>
+    <script type="text/javascript" src="js/readcookie.js"></script>
+    <script type="text/javascript" src="js/clearcontent.js"></script>
+    <script type="text/javascript" src="http://yui.yahooapis.com/3.13.0/build/yui/yui-min.js"></script>
+    <script type="text/javascript">
+    var fbAppId = '348683081941895';
+  // Additional JS functions here
+    window.fbAsyncInit = function() {
+    FB.init({
+      appId      : fbAppId, // App ID
+      status     : true,    // check login status
+      cookie     : true,    // enable cookies to allow the
+                            // server to access the session
+      xfbml      : true     // parse page for xfbml or html5
+                            // social plugins like login button below
+    });
+
+    // Put additional init code here
+  };
+
+  // Load the SDK Asynchronously
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/all.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+  
+    </script>
+  </head>
+  <body>
+    <div>
+      <form action="" method="POST" onsubmit="callServlet(this); return false;">
+        <table>
+          <tr>
+            <td><p class="big-font-size" style="color:white">Location: </p></td>
+            <td><input type="text" name="city" placeholder="Enter city or zip code" /></td>
+            <td><input type="submit" class="big-font-size" value="Search" style="width:120px" /></td>
+          </tr>
+        </table>
+      </form>
+    </div>
+
+    <div class="error">
+      <div id="errorContent"></div>
+    </div>
+    <div id="headContent"></div>
+
+    <div class="yui3-g-r">
+      <div class="yui3-u-1-4">
+        <div class="cell">
+          <div id="todayContent"></div>
+        </div>
+      </div>
+
+      <div class="yui3-u-1-4">
+        <div class="cell">
+          <div class="yui3-skin-sam">
+            <div id="forecastContent"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="yui3-u-1-4">
+        <div class="cell">
+          <div id="postContent"></div>
+        </div>
+      </div>
+
+      <div class="yahoo">
+        <div id="newsContent"></div>
+      </div>
+
+      <div class="lucid">
+        <div id="feedContent"></div>
+      </div>
+
+    </div>
+  </body>
+</html>
